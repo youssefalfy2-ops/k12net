@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Website</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Welcome to My Website</h1>
+<p>This is my first website.</p>
+
+</body>
+</html>
+
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Students</a></li>
+<li><a href="#">Teachers</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<style>
+nav ul{
+list-style:none;
+background:#333;
+padding:10px;
+}
+
+nav ul li{
+display:inline;
+margin:10px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+}
+</style>
+
+
+<form>
+<h2>Login</h2>
+
+<input type="text" placeholder="Username" required><br><br>
+
+<input type="password" placeholder="Password" required><br><br>
+
+<button type="submit">Login</button>
+
+</form>
+
+
+<script>
+alert("Error 500 - Server Error");
+</script>
+
+
+<script>
+window.addEventListener("offline", function(){
+    alert("Please connect to the internet");
+});
+</script>
+
+
+<?php
+$allowed_ip = " 37.210.243.220";
+
+if ($_SERVER['REMOTE_ADDR'] != $allowed_ip) {
+    die("Access Denied");
+}
+?>
+
+
+<h1>500 Internal Server Error</h1>
+
+<p>The server encountered an internal error and was unable to complete your request.</p>
+
+<style>
+body{
+font-family: Arial;
+text-align:center;
+margin-top:100px;
+}
+</style>
+
+
+<div class="box">
+<h3>Total Students</h3>
+<p>1,250</p>
+</div>
+
+<style>
+.box{
+width:200px;
+padding:20px;
+background:#eee;
+margin:auto;
+border-radius:10px;
+}
+</style>
+
+
+
+<div id="loader">Loading...</div>
+
+<script>
+window.onload = function(){
+document.getElementById("loader").style.display="none";
+}
+</script>
+
+
+
+<script>
+fetch("https://ipapi.co/json/")
+.then(res => res.json())
+.then(data => {
+
+if(data.security && data.security.vpn){
+alert("VPN is not allowed");
+window.location="error.html";
+}
+
+});
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Published Website</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#222;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#00c3ff;
+}
+
+section{
+    padding:40px;
+    text-align:center;
+}
+
+footer{
+    background:#003366;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Welcome to My Website</h1>
+<p>This website is now published online</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Contact</a>
+</nav>
+
+<section>
+<h2>Main Content</h2>
+<p>This is a simple HTML website that can be uploaded and published on the internet.</p>
+</section>
+
+<footer>
+<p>© 2026 My Website</p>
+</footer>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+https://www.onlinegdb.com/#tab-stdin
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #003366;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0055aa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+<h2>Login</h2>
+<input type="text" id="username" placeholder="Username"><br>
+<input type="password" id="password" placeholder="Password"><br>
+<button onclick="checkLogin()">Login</button>
+<p id="message" style="color:red;"></p>
+</div>
+
+<script>
+function checkLogin() {
+    // Set your username and password here
+    const correctUsername = "admin";
+    const correctPassword = "12345";
+
+    // Get the user input
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Check if input matches
+    if(username === correctUsername && password === correctPassword){
+        alert("Login successful!");
+        // Redirect to another page
+        window.location.href = "dashboard.html";
+    } else {
+        document.getElementById("message").innerText = "Invalid username or password!";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Live Website</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #003366;
+}
+
+#loader {
+    margin: 50px auto;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #003366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+</style>
+
+<script>
+// Simulate auto-publishing/loading
+window.onload = function() {
+    setTimeout(function(){
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }, 3000); // 3 seconds loading
+};
+
+// Optional: auto-redirect to live page
+// window.location.href = "https://saaed.com";
+
+</script>
+</head>
+
+<body>
+
+<h1>Welcome to My Website</h1>
+<div id="loader"></div>
+
+<div id="content" style="display:none;">
+    <p>Your website is now live and accessible to everyone!</p>
+    <p>Start adding pages, content, and features!</p>
+
+    <a href="index.html">Go to Home Page</a>
+</div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الاحترافي</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #0D1B2A;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #FF6B6B;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(13,27,42,0.6), rgba(13,27,42,0.6)),
+                        url('https://source.unsplash.com/1600x900/?technology,office') no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: #FF6B6B;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255,107,107,0.5);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        /* Cards */
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        }
+
+        /* Form */
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            resize: none;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #0D1B2A;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #FF6B6B;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            background-color: #0D1B2A;
+            color: white;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">موقعي</div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h1>مرحبا بكم في موقعنا الاحترافي</h1>
+            <p>تصميم عصري، واجهات جذابة، تجربة مستخدم ممتازة.</p>
+            <a href="#contact" class="btn">تواصل معنا</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>من نحن</h2>
+        <p>فريق متخصص في تصميم وتطوير المواقع الحديثة بأعلى معايير الجودة.</p>
+    </section>
+
+    <section id="services">
+        <h2>خدماتنا</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>تصميم واجهات</h3>
+                <p>واجهات جذابة وسهلة الاستخدام لأفضل تجربة مستخدم.</p>
+            </div>
+            <div class="card">
+                <h3>برمجة المواقع</h3>
+                <p>مواقع ديناميكية باستخدام أحدث التقنيات لضمان الأداء العالي.</p>
+            </div>
+            <div class="card">
+                <h3>تحسين الأداء</h3>
+                <p>زيادة سرعة الموقع وتجربة المستخدم بشكل ملحوظ.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="الاسم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <textarea placeholder="رسالتك" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('شكراً لتواصلك معنا! سيتم الرد قريباً.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع بالطول</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(13,27,42,0.9);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 50px;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #FF6B6B;
+        }
+
+        section {
+            height: 100vh; /* كل قسم يأخذ كامل ارتفاع الشاشة */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        #home {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                        url('https://source.unsplash.com/1600x900/?nature,technology') no-repeat center/cover;
+        }
+
+        #about {
+            background-color: #1E3A5F;
+        }
+
+        #services {
+            background-color: #FF6B6B;
+        }
+
+        #contact {
+            background-color: #0D1B2A;
+        }
+
+        a.btn {
+            padding: 15px 35px;
+            background-color: #FFDE59;
+            color: #0D1B2A;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        a.btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            height: 100px;
+            background-color: #0D1B2A;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive */
+        @media (max-width:768px){
+            header {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            section {
+                font-size: 1.5rem;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">موقعي</div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div>
+            <h1>مرحبًا بك في موقعي</h1>
+            <p>موقع احترافي بطول الشاشة</p>
+            <a href="#about" class="btn">ابدأ هنا</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>من نحن</h2>
+        <p>فريق متخصص في تصميم مواقع احترافية بالطول الكامل.</p>
+    </section>
+
+    <section id="services">
+        <h2>خدماتنا</h2>
+        <p>تصميم واجهات، برمجة، وتحسين أداء المواقع بشكل احترافي.</p>
+    </section>
+
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <p>يمكنك التواصل معنا عبر البريد الإلكتروني أو الهاتف.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>لوحة التحكم</h2>
+    <ul>
+      <li>الرئيسية</li>
+      <li>الإحصائيات</li>
+      <li>المستخدمين</li>
+      <li>الإعدادات</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>مرحبا بك 👋</h1>
+    </header>
+
+    <div class="cards">
+      <div class="card">عدد المستخدمين: <span id="users">0</span></div>
+      <div class="card">المبيعات: <span id="sales">0</span></div>
+      <div class="card">الطلبات: <span id="orders">0</span></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background: #2c3e50;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  background: #ecf0f1;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  font-size: 18px;
+}
+
+
+
+
+
+// بيانات تجريبية
+let users = 120;
+let sales = 3500;
+let orders = 89;
+
+// عرض البيانات
+document.getElementById("users").textContent = users;
+document.getElementById("sales").textContent = sales + "$";
+document.getElementById("orders").textContent = orders;
